@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display This Text Fullscreen</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="loadSavedText()">
+    <div id="input-container">
+        <textarea id="text-input" placeholder="Enter your text here..." maxlength="200"
+            oninput="updateCharacterCount()"></textarea>
+        <p id="char-count">200 characters remaining</p>
+        <button onclick="displayFullscreen()">Display Fullscreen</button>
+    </div>
+
+    <div id="fullscreen-display" onclick="exitFullscreen()">
+        <p id="display-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
